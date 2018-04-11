@@ -3,9 +3,11 @@ import React, { Component } from "react"
 class  Work extends Component {
     render(){
         return(
-            <div id="work">
+            <div className="work">
                 <small>{this.props.cactus.name}</small>
-                <img src={this.props.cactus.url} alt="work"/>
+                <img src={this.props.cactus.url} alt="/assets/icons/camera-logo.png"/>
+                <button>Update</button>
+                <button>Delete</button>
             </div>
         )
     }

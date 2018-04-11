@@ -126,6 +126,10 @@ class App extends Component {
             {this.state.work
               ? this.state.work.map(cactus => <Work key={cactus.id} cactus={cactus}/>)
               : ""}
+              <div className="work" id="add-work">
+                <img src="/assets/icons/camera-logo.png" alt="work"/>
+                <button>Add Work</button>
+            </div>
           </div>
         </div>
         <Footer />
