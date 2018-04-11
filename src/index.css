@@ -57,6 +57,12 @@ header{
 
 /* work Body */
 
+#work-body-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .work-body {
   display: flex;
   justify-content: space-between;
@@ -78,6 +84,34 @@ header{
 #work img {
   height: 100%;
   width: auto;
+  box-shadow: 4px 4px 20px grey;
+}
+
+/* menu */
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 10%;
+  height: 300px;
+}
+
+.icon-image {
+  height: 30px;
+  width: auto;
+  margin-bottom: 2px;
+}
+
+.icon-image:hover {
+  cursor: pointer;
+}
+
+#vessel-icon {
+  height: 20px;
+  width: auto;
+  margin-left: 5px;
 }
 
 /* footer */
@@ -119,51 +153,6 @@ footer small {
   color: #4FB477;
 }
 
-/* menu */
-
-#menu {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: auto;
-}
-
-.icon-container small {
-  opacity: 0;
-}
-
-.icon-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  width: 14%;
-}
-
-.icon-image {
-  height: 50px;
-  width: auto;
-  margin-bottom: 10px;
-}
-
-.icon-image:hover {
-  cursor: pointer;
-}
-
-.icon-image:hover + small {
-  opacity: 100%;
-}
-
-#vessel-icon {
-  height: 30px;
-  width: auto;
-  margin-left: 5px;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  margin-bottom: 0;
-}
 
 
 

@@ -7,16 +7,16 @@ class Footer extends Component {
                 <small>&copy; Seth Caparelli 2018</small>
                 <div id="social-links">
                     <a href="https://github.com/SethCaparelli" target="_blank">
-                        <i className="fab fa-github fa-2x"></i>
+                        <i className="fab fa-github"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/seth-caparelli/" target="_blank">
-                        <i className="fab fa-linkedin-in fa-2x"></i>
+                        <i className="fab fa-linkedin-in"></i>
                     </a>
                     <a href="https://www.instagram.com/bear.remington/" target="_blank">
-                        <i className="fab fa-instagram fa-2x"></i>
+                        <i className="fab fa-instagram"></i>
                     </a>
                     <a href="https://www.facebook.com/seth.caparelli.5" target="_blank">
-                        <i className="fab fa-facebook-f fa-2x" href="https://www.facebook.com/seth.caparelli.5"></i>
+                        <i className="fab fa-facebook-f" href="https://www.facebook.com/seth.caparelli.5"></i>
                     </a>
                 </div>
             </footer>

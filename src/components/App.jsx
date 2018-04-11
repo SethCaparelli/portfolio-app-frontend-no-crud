@@ -112,19 +112,21 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Menu
-          getTree={this.getTree}
-          getCactus={this.getCactus}
-          getSculpture={this.getSculpture}
-          getVessel={this.getVessel}
-          getPainting={this.getPainting}
-          getAdvertising={this.getAdvertising}
-          getDesign={this.getDesign}
-        />
-        <div className="work-body">
-          {this.state.work
-            ? this.state.work.map(cactus => <Work key={cactus.id} cactus={cactus}/>)
-            : ""}
+        <div id="work-body-container">
+          <Menu
+            getTree={this.getTree}
+            getCactus={this.getCactus}
+            getSculpture={this.getSculpture}
+            getVessel={this.getVessel}
+            getPainting={this.getPainting}
+            getAdvertising={this.getAdvertising}
+            getDesign={this.getDesign}
+          />
+          <div className="work-body">
+            {this.state.work
+              ? this.state.work.map(cactus => <Work key={cactus.id} cactus={cactus}/>)
+              : ""}
+          </div>
         </div>
         <Footer />
       </div>
