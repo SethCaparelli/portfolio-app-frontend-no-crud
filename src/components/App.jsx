@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Header from "./Header"
 import Work from "./Work"
 import Menu from "./Menu"
+import Footer from "./Footer"
 
 class App extends Component {
   constructor() {
@@ -125,6 +126,7 @@ class App extends Component {
             ? this.state.work.map(cactus => <Work key={cactus.id} cactus={cactus}/>)
             : ""}
         </div>
+        <Footer />
       </div>
     );
   }

@@ -4,6 +4,10 @@ h1, h2, h3, h3, small {
   margin: 0
 }
 
+a {
+  color: #424141;
+}
+
 html {
   height: 100%;
   width: 100%;
@@ -76,6 +80,34 @@ header{
   width: auto;
 }
 
+/* footer */
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fa-instagram:hover {
+  cursor: pointer;
+  color: #EF709D
+}
+
+.fa-linkedin-in:hover {
+  cursor: pointer;
+  color: #3772FF
+}
+
+.fa-facebook-f:hover {
+  cursor: pointer;
+  color: #70E4EF
+}
+
+.fa-github:hover {
+  cursor: pointer;
+  color: #4FB477;
+}
+
 /* menu */
 
 #menu {
@@ -84,6 +116,10 @@ header{
   align-items: center;
   width: 100%;
   height: auto;
+}
+
+.icon-container small {
+  opacity: 0;
 }
 
 .icon-container {
@@ -99,6 +135,14 @@ header{
   height: 50px;
   width: auto;
   margin-bottom: 10px;
+}
+
+.icon-image:hover {
+  cursor: pointer;
+}
+
+.icon-image:hover + small {
+  opacity: 100%;
 }
 
 #vessel-icon {
