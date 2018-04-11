@@ -1,11 +1,12 @@
+/* meta */
+
+h1, h2, h3, h3, small {
+  margin: 0
+}
+
 html {
   height: 100%;
   width: 100%;
-}
-
-.App {
-  height: auto;
-  width: auto;
 }
 
 body {
@@ -16,22 +17,57 @@ body {
   font-family: sans-serif;
 }
 
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+}
+
+/* header */
+
 header{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
 }
+
+#sc-logo {
+  height: 100px;
+  width: 100px;
+}
+
+#logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* work Body */
 
 .work-body {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   overflow-y: scroll;
-  height: 100%;
+  width: 100%;
 }
 
 #work {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   height: 300px;
-  width: 300px;
+  width: auto;
   margin: 10px;
 }
 
@@ -40,7 +76,39 @@ header{
   width: auto;
 }
 
-#sc-logo {
-  height: 100px;
-  width: 100px;
+/* menu */
+
+#menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto;
 }
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 14%;
+}
+
+.icon-image {
+  height: 50px;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+#vessel-icon {
+  height: 30px;
+  width: auto;
+  margin-left: 5px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin-bottom: 0;
+}
+
+
+
