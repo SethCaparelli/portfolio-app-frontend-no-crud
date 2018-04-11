@@ -88,6 +88,17 @@ footer {
   align-items: center;
 }
 
+footer small {
+  margin-left: 5%;
+}
+
+#social-links {
+  display: flex;
+  justify-content: space-around;
+  margin-left: auto;
+  width: 33%;
+}
+
 .fa-instagram:hover {
   cursor: pointer;
   color: #EF709D

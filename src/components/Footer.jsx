@@ -4,6 +4,7 @@ class Footer extends Component {
     render(){
         return(
             <footer>
+                <small>&copy; Seth Caparelli 2018</small>
                 <div id="social-links">
                     <a href="https://github.com/SethCaparelli" target="_blank">
                         <i className="fab fa-github fa-2x"></i>
