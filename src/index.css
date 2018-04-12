@@ -42,15 +42,16 @@ body {
 
 header{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: auto;
+  height: 20%;
 }
 
 #sc-logo {
-  height: 100px;
-  width: 100px;
+  height: 75px;
+  width: 75px;
 }
 
 #logo-container {
@@ -59,13 +60,40 @@ header{
   align-items: center;
 }
 
+#profile-picture {
+  height: 200px;
+  width: auto;
+  border-radius: 50%;
+}
+
+/* nav */
+
+#nav {
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+}
+
+.about-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
 /* work Body */
+
+#work-title {
+  display: block;
+  text-align: center;
+}
 
 #work-body-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  height: 66%;
+  justify-content: center;
+  height: 74%;
 }
 
 .work-body {
@@ -74,13 +102,12 @@ header{
   align-items: center;
   overflow-y: scroll;
   width: 100%;
-  height: 100%;
 }
 
 .work {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 300px;
   width: auto;
@@ -88,13 +115,13 @@ header{
 }
 
 .work img {
-  height: 100%;
+  height: 75%;
   width: auto;
   box-shadow: 4px 4px 20px grey;
 }
 
 #add-work {
-  margin-top: 40px;
+  margin-top: 25px;
 }
 
 #button-container {
@@ -108,8 +135,8 @@ header{
   flex-direction: column !important;
   justify-content: space-around !important;
   align-items: center !important;
-  height: 50% !important;
-  width: 30% !important;
+  height: 300px !important;
+  width: 200px !important;
 }
 
 .custom-modal {
@@ -117,8 +144,8 @@ header{
   flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
-  height: 50% !important;
-  width: 30% !important;
+  height: 300px !important;
+  width: 200px !important;
 }
 
 #update-form {
@@ -144,11 +171,10 @@ header{
 
 #menu {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 10%;
-  height: 300px;
+  width: 75%;
+  height: auto;
 }
 
 .icon-image {
@@ -173,8 +199,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 10%;
-  margin-bottom: 5px;
+  height: 6%;
 }
 
 footer small {
@@ -207,7 +232,3 @@ footer small {
   cursor: pointer;
   color: #4FB477;
 }
-
-
-
-

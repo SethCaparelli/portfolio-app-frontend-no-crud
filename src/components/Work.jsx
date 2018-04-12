@@ -75,7 +75,7 @@ class Work extends Component {
                 <small>{this.props.work.name}</small>
                 <img src={this.props.work.url} alt="http://localhost:3000/assets/icons/camera-logo.png"/>
                 <div id="button-container">
-                    <button onClick={this.onOpenUpdateModal}>Update</button>
+                    <button onClick={this.onOpenUpdateModal}>Edit</button>
                     <button onClick={this.onOpenDeleteModal}>Delete</button>
                 </div>
                 <Modal classNames={{ overlay: 'custom-overlay', modal: 'custom-modal' }} open={openUpdate} onClose={this.onCloseUpdateModal} little>

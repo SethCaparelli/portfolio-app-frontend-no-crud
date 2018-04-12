@@ -10,7 +10,8 @@ class App extends Component {
     super()
     this.state = {
       openModal: false,
-      work: []
+      work: [],
+      workTitle: ""
     }
   }
 
@@ -58,7 +59,8 @@ class App extends Component {
     })
     .then((data) => {
       this.setState({
-        work: data.cactus
+        work: data.cactus,
+        workTitle: "Cactus^3"
       })
     })
   }
@@ -70,7 +72,8 @@ class App extends Component {
     })
     .then((data) => {
       this.setState({
-        work: data.tree
+        work: data.tree,
+        workTitle: "Reclaim Tree"
       })
     })
   }
@@ -82,7 +85,8 @@ class App extends Component {
     })
     .then((data) => {
       this.setState({
-        work: data.cactus
+        work: data.cactus,
+        workTitle: "Cactus^3"
       })
     })
   }
@@ -94,7 +98,8 @@ class App extends Component {
     })
     .then((data) => {
       this.setState({
-        work: data.sculpture
+        work: data.sculpture,
+        workTitle: "Sculpture"
       })
     })
   }
@@ -106,7 +111,8 @@ class App extends Component {
     })
     .then((data) => {
       this.setState({
-        work: data.vessel
+        work: data.vessel,
+        workTitle: "Vessel"
       })
     })
   }
@@ -118,7 +124,8 @@ class App extends Component {
     })
     .then((data) => {
       this.setState({
-        work: data.painting
+        work: data.painting,
+        workTitle: "Painting"
       })
     })
   }
@@ -130,7 +137,8 @@ class App extends Component {
     })
     .then((data) => {
       this.setState({
-        work: data.advertising
+        work: data.advertising,
+        workTitle: "Advertising"
       })
     })
   }
@@ -142,7 +150,8 @@ class App extends Component {
     })
     .then((data) => {
       this.setState({
-        work: data.design
+        work: data.design,
+        workTitle: "Design"
       })
     })
   }
@@ -153,15 +162,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <div id="work-body-container">
-          <Menu
-            getTree={this.getTree}
-            getCactus={this.getCactus}
-            getSculpture={this.getSculpture}
-            getVessel={this.getVessel}
-            getPainting={this.getPainting}
-            getAdvertising={this.getAdvertising}
-            getDesign={this.getDesign}
-          />
+          <h3 id="work-title">{this.state.workTitle}</h3>
           <div className="work-body">
             {this.state.work
               ? this.state.work.map(work => <Work key={work.id} work={work}/>)
@@ -171,6 +172,15 @@ class App extends Component {
                 <button onClick={this.onOpenModal}>Add Work</button>
             </div>
           </div>
+          <Menu
+            getTree={this.getTree}
+            getCactus={this.getCactus}
+            getSculpture={this.getSculpture}
+            getVessel={this.getVessel}
+            getPainting={this.getPainting}
+            getAdvertising={this.getAdvertising}
+            getDesign={this.getDesign}
+          />
         </div>
         <Modal classNames={{ overlay: 'custom-overlay', modal: 'custom-modal' }} open={openModal} onClose={this.onCloseModal} little>
           <h2>Add Work</h2>
