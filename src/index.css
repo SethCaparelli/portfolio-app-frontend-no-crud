@@ -4,6 +4,10 @@ h1, h2, h3, h3, small {
   margin: 0
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 a {
   color: #424141;
 }
@@ -91,6 +95,49 @@ header{
 
 #add-work {
   margin-top: 40px;
+}
+
+#button-container {
+  display: flex;
+}
+
+/* update & modal */
+
+.custom-modal-2 {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  height: 50% !important;
+  width: 30% !important;
+}
+
+.custom-modal {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 50% !important;
+  width: 30% !important;
+}
+
+#update-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 75%;
+  width: 100%;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+#delete-modal-header {
+  text-align: center;
+  color: red;
 }
 
 /* menu */
