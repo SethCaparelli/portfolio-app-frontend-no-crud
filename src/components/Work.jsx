@@ -34,7 +34,21 @@ class Work extends Component {
                 })
             }
         })
+        .catch(error => console.log(error))
+    }
 
+    deleteWork = () => {
+        const url = `https://aqueous-dusk-19159.herokuapp.com/${this.props.work.type}/${this.props.work.id}`
+        fetch(url, {
+            method: "DELETE"
+        })
+        .then(response => {
+            if(response.status === 204) {
+                this.setState({
+                    openDelete: false
+                })
+            }
+        })
     }
 
     onOpenUpdateModal = () => {
@@ -59,7 +73,7 @@ class Work extends Component {
         return(
             <div className="work">
                 <small>{this.props.work.name}</small>
-                <img src={this.props.work.url} alt="/assets/icons/camera-logo.png"/>
+                <img src={this.props.work.url} alt="http://localhost:3000/assets/icons/camera-logo.png"/>
                 <div id="button-container">
                     <button onClick={this.onOpenUpdateModal}>Update</button>
                     <button onClick={this.onOpenDeleteModal}>Delete</button>
@@ -76,7 +90,7 @@ class Work extends Component {
                             <input ref={(i) => {this.materialInput = i}} type="text"/>
                         </div>
                         <div className="input" id="url-input">
-                            <label htmlFor="url">URL</label>
+                            <label htmlFor="url">Picture URL</label>
                             <input ref={(i) => {this.urlInput = i}} type="text"/>
                         </div>
                         <input type="submit"/>
@@ -86,7 +100,7 @@ class Work extends Component {
                     <h3 id="delete-modal-header">Are you sure you want to delete {this.props.work.name}?</h3>
                     <div id="delete-buttons">
                         <button onClick={this.deleteWork}>YES</button>
-                        <button onClick={this.onCloseDeleteModal}>NO</button>
+                        <button onClick={this.deleteWork}>NO</button>
                     </div>
 
                 </Modal>

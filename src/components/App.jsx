@@ -14,6 +14,35 @@ class App extends Component {
     }
   }
 
+  addWork = (event) => {
+    const url = `https://aqueous-dusk-19159.herokuapp.com/${this.state.work[0].type}`
+    event.preventDefault()
+    console.log(url)
+    const data = {
+        name: this.nameInput.value,
+        material: this.materialInput.value,
+        url: this.urlInput.value,
+        type: this.state.work[0].type,
+    }
+    console.log(data)
+    fetch(url, {
+        method: "Post",
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+      console.log(response)
+        if(response.status === 201) {
+            this.setState({
+                openModal: false
+            })
+        }
+    })
+  }
+
   onOpenModal = () => {
     this.setState({ openModal: true });
   }
@@ -145,22 +174,18 @@ class App extends Component {
         </div>
         <Modal classNames={{ overlay: 'custom-overlay', modal: 'custom-modal' }} open={openModal} onClose={this.onCloseModal} little>
           <h2>Add Work</h2>
-          <form id="update-form">
+          <form onSubmit={(e) => {this.addWork(e)}} id="update-form">
               <div className="input" id="name-input">
                   <label htmlFor="name">Name</label>
-                  <input ef={(i) => {this.nameInput = i}} type="text"/>
+                  <input ref={(i) => {this.nameInput = i}} type="text"/>
               </div>
               <div className="input" id="material-input">
                   <label htmlFor="material">Material</label>
                   <input ref={(i) => {this.materialInput = i}} type="text"/>
               </div>
               <div className="input" id="url-input">
-                  <label htmlFor="url">URL</label>
+                  <label htmlFor="url">Picture URL</label>
                   <input ref={(i) => {this.urlInput = i}} type="text"/>
-              </div>
-              <div className="input" id="type-input">
-                  <label htmlFor="type">Type</label>
-                  <input ref={(i) => {this.typeInput = i}} type="text"/>
               </div>
               <input type="submit"/>
           </form>
