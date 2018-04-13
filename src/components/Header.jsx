@@ -8,7 +8,8 @@ class Header extends Component {
             <header>
                 <div id="logo-container">
                     <img id="sc-logo" src="/assets/icons/personal-logo.png" alt="personal-icon"/>
-                    <h1>Seth Caparelli</h1>
+                    <h1 id="logo-header">Seth Caparelli</h1>
+                    <h5 id="logo-subheader">Web Developer | Artist</h5>
                 </div>
                 <Nav />
             </header>

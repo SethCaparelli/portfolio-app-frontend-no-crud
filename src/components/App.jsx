@@ -157,16 +157,17 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.work.length)
     const {openModal} = this.state
     return (
       <div className="App">
         <Header />
         <div id="work-body-container">
           <h3 id="work-title">{this.state.workTitle}</h3>
-          <div className="work-body">
-            {this.state.work
+          <div className={this.state.work.length > 0 ? "work-body" : "work-body-small"}>
+            {this.state.work.length > 0
               ? this.state.work.map(work => <Work key={work.id} work={work}/>)
-              : ""}
+              : <div id="loader-container"><div className="loader">Loading...</div></div>}
               <div className="work" id="add-work">
                 <img src="/assets/icons/camera-logo.png" alt="work"/>
                 <button onClick={this.onOpenModal}>Add Work</button>

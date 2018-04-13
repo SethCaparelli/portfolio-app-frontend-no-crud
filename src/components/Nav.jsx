@@ -8,8 +8,6 @@ class Nav extends Component {
             openAbout: false,
             openResume: false,
             openContact: false,
-            pageNumber: null,
-            numPages: 1
         }
     }
 
@@ -34,8 +32,10 @@ class Nav extends Component {
         const { openResume } = this.state
         return(
             <div id="nav">
+                <a href="mailto:sethcaparelli@gmail.com">
+                    <h5 onClick={this.onOpenContactModal} className="nav-target">Contact</h5>
+                </a>
                 <h5 onClick={this.onOpenAboutModal} className="nav-target">About</h5>
-                <h5 className="nav-target">Contact</h5>
                 <h5 onClick={this.onOpenResumeModal} className="nav-target">Resume</h5>
                 <Modal classNames={{ overlay: 'about-overlay', modal: 'about-modal' }} open={openAbout} onClose={this.onCloseAboutModal} little>
                     <img id="profile-picture" src="/assets/icons/profile.png" alt="/assets/icons/camera-logo.png"/>
@@ -47,7 +47,7 @@ class Nav extends Component {
                 </Modal>
                 <Modal classNames={{ overlay: 'resume-overlay', modal: 'resume-modal' }} open={openResume} onClose={this.onCloseResumeModal} little>
                     <img id="resume" src="/assets/seth_caparelli_resume.png" alt="resume"/>
-                    <a href="https://github.com/SethCaparelli/resume/blob/master/seth_caparelli_resume.pdf" target="_blank" rel="noopener noreferrer">
+                    <a href="https://drive.google.com/uc?export=download&id=1_2E40cmoNX4tMlU3sYBqS5zTQ3ANTWTB">
                         <i className="fas fa-download"></i>
                     </a>
                 </Modal>
