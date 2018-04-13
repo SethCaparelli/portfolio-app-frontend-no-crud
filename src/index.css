@@ -1,5 +1,5 @@
 /* meta */
-/* 
+/*
 font-family: 'Prosto One', cursive;
 font-family: 'Varela', sans-serif;
 font-family: 'Alegreya Sans SC', sans-serif;
@@ -10,6 +10,10 @@ font-family: 'Michroma', sans-serif; */
 
 h1, h2, h3, h3, h4, h5, small {
   margin: 0
+}
+
+button {
+  font-family: 'Ruda', sans-serif;
 }
 
 button:hover {
@@ -139,7 +143,7 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   height: 64%;
 }
 
@@ -169,14 +173,15 @@ header{
   margin: 10px;
 }
 
-.work img {
-  height: 75%;
+#work-img {
+  height: 250px;
   width: auto;
   box-shadow: 4px 4px 20px grey;
 }
 
 #add-work {
   margin-top: 25px;
+  height: 250px;
 }
 
 #button-container {
@@ -280,6 +285,11 @@ header{
   width: 200px !important;
 }
 
+.resume-modal {
+  height: 100%;
+  width: auto;
+}
+
 #update-form {
   display: flex;
   flex-direction: column;
@@ -359,4 +369,21 @@ footer small {
 .fa-github:hover {
   cursor: pointer;
   color: #4FB477;
+}
+
+
+@media only screen and (max-width: 500px) {
+  .resume-modal {
+    height: 73%;
+    width: auto;
+  }
+
+  #resume {
+    height: 95%;
+    width: auto;
+  }
+
+  .about-modal {
+    width: 80%;
+  }
 }

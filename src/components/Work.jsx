@@ -1,12 +1,15 @@
 import React, { Component } from "react"
 import Modal from "react-responsive-modal"
+import Lightbox from 'react-image-lightbox'
 
 class Work extends Component {
     constructor() {
         super()
         this.state = {
             openUpdate: false,
-            openDelete: false
+            openDelete: false,
+            isOpen: false,
+            photoIndex: 0
         }
     }
 
@@ -68,12 +71,36 @@ class Work extends Component {
     }
 
     render(){
+        const images = this.props.allWork.map(work => {
+            return work.url
+        })
+        const { isOpen, photoIndex } = this.state
         const { openUpdate } = this.state
         const { openDelete } = this.state
         return(
             <div className="work">
                 <small id="work-title">{this.props.work.name}</small>
-                <img src={this.props.work.url} alt="http://localhost:3000/assets/icons/camera-logo.png"/>
+                <div>
+                    <img id="work-img" onClick={() => this.setState({ isOpen: true, photoIndex: this.props.index })} src={this.props.work.url} alt="/assets/icons/camera-logo.png"/>
+                    {isOpen && (
+                    <Lightbox
+                        mainSrc={images[photoIndex]}
+                        nextSrc={images[(photoIndex + 1) % images.length]}
+                        prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+                        onCloseRequest={() => this.setState({ isOpen: false })}
+                        onMovePrevRequest={() =>
+                        this.setState({
+                            photoIndex: (photoIndex + images.length - 1) % images.length,
+                        })
+                        }
+                        onMoveNextRequest={() =>
+                        this.setState({
+                            photoIndex: (photoIndex + 1) % images.length,
+                        })
+                        }
+                    />
+                    )}
+                </div>
                 <div id="button-container">
                     <button onClick={this.onOpenUpdateModal}>Edit</button>
                     <button onClick={this.onOpenDeleteModal}>Delete</button>
