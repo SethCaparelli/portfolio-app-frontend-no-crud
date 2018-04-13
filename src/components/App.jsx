@@ -163,7 +163,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <div id="work-body-container">
-          <h3 id="work-title">{this.state.workTitle}</h3>
+          <h3 id="work-header">{this.state.workTitle}</h3>
           <div className={this.state.work.length > 0 ? "work-body" : "work-body-small"}>
             {this.state.work.length > 0
               ? this.state.work.map(work => <Work key={work.id} work={work}/>)

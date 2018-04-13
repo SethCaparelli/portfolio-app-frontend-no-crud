@@ -72,7 +72,7 @@ class Work extends Component {
         const { openDelete } = this.state
         return(
             <div className="work">
-                <small>{this.props.work.name}</small>
+                <small id="work-title">{this.props.work.name}</small>
                 <img src={this.props.work.url} alt="http://localhost:3000/assets/icons/camera-logo.png"/>
                 <div id="button-container">
                     <button onClick={this.onOpenUpdateModal}>Edit</button>
