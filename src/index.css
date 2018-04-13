@@ -74,11 +74,25 @@ header{
   width: 75%;
 }
 
+.nav-target {
+  cursor: pointer;
+}
+
 .about-modal {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+
+.resume-modal {
+  height: 100%;
+  width: auto;
+}
+
+#resume {
+  height: 100%;
+  width: auto;
 }
 
 /* work Body */
