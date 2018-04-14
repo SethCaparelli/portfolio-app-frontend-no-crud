@@ -100,6 +100,10 @@ header{
 .nav-target {
   cursor: pointer;
   font-family: 'Ruda', sans-serif;
+  opacity: 0.4;
+}
+.nav-target:hover {
+  opacity: 1;
 }
 
 .contact-modal {
@@ -176,7 +180,17 @@ header{
 #work-img {
   height: 250px;
   width: auto;
+  margin-bottom: 10px;
+  margin-top: 5px;
   box-shadow: 4px 4px 20px grey;
+}
+
+#work-img:hover {
+  -moz-transform:scale(1.08);
+  -webkit-transform:scale(1.08);
+  -ms-transform:scale(1.08);
+  transform: scale(1.08);
+  cursor: pointer;
 }
 
 #add-work {
@@ -317,6 +331,7 @@ header{
   align-items: center;
   width: 75%;
   height: auto;
+  margin-bottom: 15px;
 }
 
 .icon-image {
