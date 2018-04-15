@@ -71,9 +71,16 @@ class Work extends Component {
     }
 
     render(){
-        const images = this.props.allWork.map(work => {
+        const images = this.props.collection.map(work => {
             return work.url
         })
+        const captions = this.props.collection.map(work => {
+            return work.material
+        })
+        const titles = this.props.collection.map(work => {
+            return work.name
+        })
+        console.log(captions)
         const { isOpen, photoIndex } = this.state
         const { openUpdate } = this.state
         const { openDelete } = this.state
@@ -84,6 +91,8 @@ class Work extends Component {
                     <img id="work-img" onClick={() => this.setState({ isOpen: true, photoIndex: this.props.index })} src={this.props.work.url} alt="/assets/icons/camera-logo.png"/>
                     {isOpen && (
                     <Lightbox
+                        imageTitle={titles[photoIndex]}
+                        imageCaption={captions[photoIndex]}
                         mainSrc={images[photoIndex]}
                         nextSrc={images[(photoIndex + 1) % images.length]}
                         prevSrc={images[(photoIndex + images.length - 1) % images.length]}
@@ -135,4 +144,5 @@ class Work extends Component {
         )
     }
 }
+
 export default Work

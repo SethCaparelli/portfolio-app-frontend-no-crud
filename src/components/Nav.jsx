@@ -42,11 +42,11 @@ class Nav extends Component {
                     <p>I am an artist turned web developer. I have always loved building with my hands; but as a programmer, my mind
                     is my tool of choice.  The passion I have as an artist has transformed into creative problem solving in the form of code.
                     Bridging the gap between art and code is something I continually think about and to actually make an impact on the world with my work is what drives me.
-                    I embrace the challenges of this industry and its constant evolution that I am excited to be apart of</p>
+                    I embrace the challenges of this industry and its constant evolution that I am excited to be apart of.</p>
                 </Modal>
                 <Modal classNames={{ overlay: 'resume-overlay', modal: 'resume-modal' }} open={openResume} onClose={this.onCloseResumeModal} little>
                     <img id="resume" src="/assets/seth_caparelli_resume.png" alt="resume"/>
-                    <a href="https://drive.google.com/uc?export=download&id=1_2E40cmoNX4tMlU3sYBqS5zTQ3ANTWTB">
+                    <a href="https://drive.google.com/uc?export=download&id=1p_DEyhBJF4nYwwHz30QetKnxe7slc2bS">
                         <i className="fas fa-download"></i>
                     </a>
                 </Modal>
@@ -54,4 +54,5 @@ class Nav extends Component {
         )
     }
 }
+
 export default Nav

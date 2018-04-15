@@ -11,8 +11,38 @@ class App extends Component {
     this.state = {
       openModal: false,
       work: [],
+      // work: [{
+      //   name: "Fridge Vision",
+      //   material: "A Native app that allows users to capture a photo of their fridge or pantry with their mobile device.  Fridge Vision then uses an image recognition to create a list of ingredients. Users are then presented with recipes that they can make with the available food items they already have.",
+      //   technologies: "SPA that allows users to search for cocktails based off name, ingredient, or random. It then prompts users to search for the corresponding recipe.",
+      //   url: "/assets/ezgif.com-optimize.gif"
+
+      // }, {
+      //   name: "Music@",
+      //   material: "Oauth2 connects users to their Spotify account and populates the page with their followed artists. With a click of a button, users are able to bring up the tour information from the Bands In Town Api for each artist",
+      //   technologies: "",
+      //   url: "/assets/gifs/"
+      // }, {
+      //   name: "Cocktail=>",
+      //   material: "",
+      //   technologies: "",
+      //   url: "/assets/gifs/"
+      // }],
       workTitle: ""
     }
+  }
+
+  componentDidMount() {
+    fetch("https://aqueous-dusk-19159.herokuapp.com/cactus")
+    .then(response => {
+      return response.json()
+    })
+    .then((data) => {
+      this.setState({
+        work: data.cactus,
+        workTitle: "Cactus^3"
+      })
+    })
   }
 
   addWork = (event) => {
@@ -50,19 +80,6 @@ class App extends Component {
 
   onCloseModal = () => {
       this.setState({ openModal: false });
-  }
-
-  componentDidMount() {
-    fetch("https://aqueous-dusk-19159.herokuapp.com/cactus")
-    .then(response => {
-      return response.json()
-    })
-    .then((data) => {
-      this.setState({
-        work: data.cactus,
-        workTitle: "Cactus^3"
-      })
-    })
   }
 
   getTree = () => {
@@ -164,13 +181,15 @@ class App extends Component {
         <div id="work-body-container">
           <h3 id="work-header">{this.state.workTitle}</h3>
           <div className={this.state.work.length > 0 ? "work-body" : "work-body-small"}>
-            {this.state.work.length > 0
-              ? this.state.work.map((work, index) => <Work key={work.id} index={index} allWork={this.state.work} work={work}/>)
-              : <div id="loader-container"><div className="loader">Loading...</div></div>}
-              <div className="work">
+          {this.state.work.length > 0
+            ? this.state.work.map((work, index, collection) => <Work key={work.id} index={index} collection={collection} allWork={this.state.work} work={work}/>)
+            : <div id="loader-container"><div className="loader">Loading...</div></div>}
+          {this.state.work.length > 0
+            ? <div className="work">
                 <img id="add-work" src="/assets/icons/camera-logo.png" alt="work"/>
                 <button onClick={this.onOpenModal}>Add Work</button>
-            </div>
+              </div>
+            : ""}
           </div>
           <Menu
             getTree={this.getTree}

@@ -18,6 +18,9 @@ class Footer extends Component {
                     <a href="https://www.facebook.com/seth.caparelli.5" target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-facebook-f" href="https://www.facebook.com/seth.caparelli.5"></i>
                     </a>
+                    <a href="https://soundcloud.com/sethatronus_rex" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-soundcloud"></i>
+                    </a>
                 </div>
             </footer>
         )

@@ -170,7 +170,7 @@ class Menu extends Component {
         })
     }
 
-    changeBackdAdvertising = () => {
+    changeBackAdvertising = () => {
         this.setState({
             image: {
                 cactus: "/assets/icons/cactus-icon.png",
