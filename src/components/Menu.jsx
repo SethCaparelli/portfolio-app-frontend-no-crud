@@ -5,6 +5,7 @@ class Menu extends Component {
         super()
         this.state = {
             image: {
+                app: "/assets/icons/app-icon.png",
                 cactus: "/assets/icons/cactus-icon.png",
                 tree: "/assets/icons/tree-icon.png",
                 sculpture: "/assets/icons/sculpture-icon.png",
@@ -19,6 +20,7 @@ class Menu extends Component {
     changeCactus = () => {
         this.setState({
             image: {
+                app: "/assets/icons/app-icon.png",
                 cactus: "/assets/icons/cactus-icon-color.png",
                 tree: "/assets/icons/tree-icon.png",
                 sculpture: "/assets/icons/sculpture-icon.png",
@@ -33,6 +35,7 @@ class Menu extends Component {
     changeBackCactus = () => {
         this.setState({
             image: {
+                app: "/assets/icons/app-icon.png",
                 cactus: "/assets/icons/cactus-icon.png",
                 tree: "/assets/icons/tree-icon.png",
                 sculpture: "/assets/icons/sculpture-icon.png",
@@ -47,6 +50,7 @@ class Menu extends Component {
     changeTree = () => {
         this.setState({
             image: {
+                app: "/assets/icons/app-icon.png",
                 cactus: "/assets/icons/cactus-icon.png",
                 tree: "/assets/icons/tree-icon-color.png",
                 sculpture: "/assets/icons/sculpture-icon.png",
@@ -61,6 +65,7 @@ class Menu extends Component {
     changeBackTree = () => {
         this.setState({
             image: {
+                app: "/assets/icons/app-icon.png",
                 cactus: "/assets/icons/cactus-icon.png",
                 tree: "/assets/icons/tree-icon.png",
                 sculpture: "/assets/icons/sculpture-icon.png",
@@ -75,6 +80,7 @@ class Menu extends Component {
     changeSculpture = () => {
         this.setState({
             image: {
+                app: "/assets/icons/app-icon.png",
                 cactus: "/assets/icons/cactus-icon.png",
                 tree: "/assets/icons/tree-icon.png",
                 sculpture: "/assets/icons/sculpture-icon-color.png",
@@ -89,6 +95,7 @@ class Menu extends Component {
     changeBackSculpture = () => {
         this.setState({
             image: {
+                app: "/assets/icons/app-icon.png",
                 cactus: "/assets/icons/cactus-icon.png",
                 tree: "/assets/icons/tree-icon.png",
                 sculpture: "/assets/icons/sculpture-icon.png",
@@ -103,6 +110,7 @@ class Menu extends Component {
     changeVessel = () => {
         this.setState({
             image: {
+                app: "/assets/icons/app-icon.png",
                 cactus: "/assets/icons/cactus-icon.png",
                 tree: "/assets/icons/tree-icon.png",
                 sculpture: "/assets/icons/sculpture-icon.png",
@@ -117,6 +125,7 @@ class Menu extends Component {
     changeBackVessel = () => {
         this.setState({
             image: {
+                app: "/assets/icons/app-icon.png",
                 cactus: "/assets/icons/cactus-icon.png",
                 tree: "/assets/icons/tree-icon.png",
                 sculpture: "/assets/icons/sculpture-icon.png",
@@ -131,6 +140,7 @@ class Menu extends Component {
     changePainting = () => {
         this.setState({
             image: {
+                app: "/assets/icons/app-icon.png",
                 cactus: "/assets/icons/cactus-icon.png",
                 tree: "/assets/icons/tree-icon.png",
                 sculpture: "/assets/icons/sculpture-icon.png",
@@ -145,6 +155,7 @@ class Menu extends Component {
     changeBackPainting = () => {
         this.setState({
             image: {
+                app: "/assets/icons/app-icon.png",
                 cactus: "/assets/icons/cactus-icon.png",
                 tree: "/assets/icons/tree-icon.png",
                 sculpture: "/assets/icons/sculpture-icon.png",
@@ -159,6 +170,7 @@ class Menu extends Component {
     changeAdvertising = () => {
         this.setState({
             image: {
+                app: "/assets/icons/app-icon.png",
                 cactus: "/assets/icons/cactus-icon.png",
                 tree: "/assets/icons/tree-icon.png",
                 sculpture: "/assets/icons/sculpture-icon.png",
@@ -173,6 +185,7 @@ class Menu extends Component {
     changeBackAdvertising = () => {
         this.setState({
             image: {
+                app: "/assets/icons/app-icon.png",
                 cactus: "/assets/icons/cactus-icon.png",
                 tree: "/assets/icons/tree-icon.png",
                 sculpture: "/assets/icons/sculpture-icon.png",
@@ -187,6 +200,7 @@ class Menu extends Component {
     changeDesign = () => {
         this.setState({
             image: {
+                app: "/assets/icons/app-icon.png",
                 cactus: "/assets/icons/cactus-icon.png",
                 tree: "/assets/icons/tree-icon.png",
                 sculpture: "/assets/icons/sculpture-icon.png",
@@ -201,6 +215,37 @@ class Menu extends Component {
     changeBackDesign = () => {
         this.setState({
             image: {
+                app: "/assets/icons/app-icon.png",
+                cactus: "/assets/icons/cactus-icon.png",
+                tree: "/assets/icons/tree-icon.png",
+                sculpture: "/assets/icons/sculpture-icon.png",
+                vessel: "/assets/icons/vessel-icon.png",
+                painting: "/assets/icons/painting-icon.png",
+                advertising: "/assets/icons/advertising-icon.png",
+                design: "/assets/icons/design-icon.png"
+            }
+        })
+    }
+
+    changeApp = () => {
+        this.setState({
+            image: {
+                app: "/assets/icons/app-icon-color.png",
+                cactus: "/assets/icons/cactus-icon.png",
+                tree: "/assets/icons/tree-icon.png",
+                sculpture: "/assets/icons/sculpture-icon.png",
+                vessel: "/assets/icons/vessel-icon.png",
+                painting: "/assets/icons/painting-icon.png",
+                advertising: "/assets/icons/advertising-icon.png",
+                design: "/assets/icons/design-icon-color.png"
+            }
+        })
+    }
+
+    changeBackApp = () => {
+        this.setState({
+            image: {
+                app: "/assets/icons/app-icon.png",
                 cactus: "/assets/icons/cactus-icon.png",
                 tree: "/assets/icons/tree-icon.png",
                 sculpture: "/assets/icons/sculpture-icon.png",
@@ -215,13 +260,14 @@ class Menu extends Component {
     render(){
         return(
             <div id="menu">
-                    <img onMouseEnter={this.changeCactus} onMouseLeave={this.changeBackCactus} className="icon-image" id="cactus-icon" src={this.state.image.cactus} alt="/assets/icons/camera-icon.png" onClick={this.props.getCactus}/>
-                    <img onMouseEnter={this.changeTree} onMouseLeave={this.changeBackTree} className="icon-image" id="tree-icon" src={this.state.image.tree} alt="/assets/icons/camera-icon.png" onClick={this.props.getTree}/>
-                    <img onMouseEnter={this.changeSculpture} onMouseLeave={this.changeBackSculpture} className="icon-image" id="sculpture-icon" src={this.state.image.sculpture} alt="/assets/icons/camera-icon.png" onClick={this.props.getSculpture}/>
-                    <img onMouseEnter={this.changeVessel} onMouseLeave={this.changeBackVessel} className="icon-image" id="vessel-icon" src={this.state.image.vessel} alt="/assets/icons/camera-icon.png" onClick={this.props.getVessel}/>
-                    <img onMouseEnter={this.changePainting} onMouseLeave={this.changeBackPainting} className="icon-image" id="painting-icon" src={this.state.image.painting} alt="/assets/icons/camera-icon.png" onClick={this.props.getPainting}/>
-                    <img onMouseEnter={this.changeAdvertising} onMouseLeave={this.changeBackAdvertising} className="icon-image" id="advertising-icon" src={this.state.image.advertising} alt="/assets/icons/camera-icon.png" onClick={this.props.getAdvertising}/>
-                    <img onMouseEnter={this.changeDesign} onMouseLeave={this.changeBackDesign} className="icon-image" id="design-icon" src={this.state.image.design} alt="/assets/icons/camera-icon.png" onClick={this.props.getDesign}/>
+                    <img onMouseEnter={this.changeApp} onMouseLeave={this.changeBackApp} className="icon-image" id="app-icon" src={this.state.image.app} alt="menu-item" onClick={this.props.getApp}/>
+                    <img onMouseEnter={this.changeCactus} onMouseLeave={this.changeBackCactus} className="icon-image" id="cactus-icon" src={this.state.image.cactus} alt="menu-item" onClick={this.props.getCactus}/>
+                    <img onMouseEnter={this.changeTree} onMouseLeave={this.changeBackTree} className="icon-image" id="tree-icon" src={this.state.image.tree} alt="menu-item" onClick={this.props.getTree}/>
+                    <img onMouseEnter={this.changeSculpture} onMouseLeave={this.changeBackSculpture} className="icon-image" id="sculpture-icon" src={this.state.image.sculpture} alt="menu-item" onClick={this.props.getSculpture}/>
+                    <img onMouseEnter={this.changeVessel} onMouseLeave={this.changeBackVessel} className="icon-image" id="vessel-icon" src={this.state.image.vessel} alt="menu-item" onClick={this.props.getVessel}/>
+                    <img onMouseEnter={this.changePainting} onMouseLeave={this.changeBackPainting} className="icon-image" id="painting-icon" src={this.state.image.painting} alt="menu-item" onClick={this.props.getPainting}/>
+                    <img onMouseEnter={this.changeAdvertising} onMouseLeave={this.changeBackAdvertising} className="icon-image" id="advertising-icon" src={this.state.image.advertising} alt="menu-item" onClick={this.props.getAdvertising}/>
+                    <img onMouseEnter={this.changeDesign} onMouseLeave={this.changeBackDesign} className="icon-image" id="design-icon" src={this.state.image.design} alt="menu-item" onClick={this.props.getDesign}/>
             </div>
         )
     }
