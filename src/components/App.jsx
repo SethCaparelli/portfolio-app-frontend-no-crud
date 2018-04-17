@@ -108,7 +108,8 @@ class App extends Component {
 
   getTree = () => {
     this.setState({
-      work: []
+      work: [],
+      workTitle: "Reclaim Tree"
     })
     fetch("https://aqueous-dusk-19159.herokuapp.com/tree")
     .then((response) => {
@@ -117,14 +118,14 @@ class App extends Component {
     .then((data) => {
       this.setState({
         work: data.tree,
-        workTitle: "Reclaim Tree"
       })
     })
   }
 
   getCactus = () => {
     this.setState({
-      work: []
+      work: [],
+      workTitle: "Cactus^3"
     })
     fetch("https://aqueous-dusk-19159.herokuapp.com/cactus")
     .then((response) => {
@@ -133,14 +134,14 @@ class App extends Component {
     .then((data) => {
       this.setState({
         work: data.cactus,
-        workTitle: "Cactus^3"
       })
     })
   }
 
   getSculpture = () => {
     this.setState({
-      work: []
+      work: [],
+      workTitle: "Sculpture"
     })
     fetch("https://aqueous-dusk-19159.herokuapp.com/sculpture")
     .then((response) => {
@@ -149,14 +150,14 @@ class App extends Component {
     .then((data) => {
       this.setState({
         work: data.sculpture,
-        workTitle: "Sculpture"
       })
     })
   }
 
   getVessel = () => {
     this.setState({
-      work: []
+      work: [],
+      workTitle: "Vessel"
     })
     fetch("https://aqueous-dusk-19159.herokuapp.com/vessel")
     .then((response) => {
@@ -165,14 +166,14 @@ class App extends Component {
     .then((data) => {
       this.setState({
         work: data.vessel,
-        workTitle: "Vessel"
       })
     })
   }
 
   getPainting = () => {
     this.setState({
-      work: []
+      work: [],
+      workTitle: "Painting"
     })
     fetch("https://aqueous-dusk-19159.herokuapp.com/painting")
     .then((response) => {
@@ -181,14 +182,14 @@ class App extends Component {
     .then((data) => {
       this.setState({
         work: data.painting,
-        workTitle: "Painting"
       })
     })
   }
 
   getAdvertising = () => {
     this.setState({
-      work: []
+      work: [],
+      workTitle: "Advertising"
     })
     fetch("https://aqueous-dusk-19159.herokuapp.com/advertising")
     .then((response) => {
@@ -197,14 +198,14 @@ class App extends Component {
     .then((data) => {
       this.setState({
         work: data.advertising,
-        workTitle: "Advertising"
       })
     })
   }
 
   getDesign = () => {
     this.setState({
-      work: []
+      work: [],
+      workTitle: "Design"
     })
     fetch("https://aqueous-dusk-19159.herokuapp.com/design")
     .then((response) => {
@@ -213,7 +214,6 @@ class App extends Component {
     .then((data) => {
       this.setState({
         work: data.design,
-        workTitle: "Design"
       })
     })
   }
@@ -229,12 +229,6 @@ class App extends Component {
           {this.state.work.length > 0
             ? this.state.work.map((work, index, collection) => <Work key={work.id} index={index} collection={collection} allWork={this.state.work} work={work}/>)
             : <div id="loader-container"><div className="loader">Loading...</div></div>}
-          {this.state.work.length > 0
-            ? <div className="work">
-                <img id="add-work" src="/assets/icons/camera-logo.png" alt="work"/>
-                <button onClick={this.onOpenModal}>Add Work</button>
-              </div>
-            : ""}
           </div>
           <Menu
             getApp={this.getApp}
