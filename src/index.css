@@ -346,25 +346,6 @@ header{
   width: auto;
 }
 
-#update-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 75%;
-  width: 100%;
-}
-
-.input {
-  display: flex;
-  flex-direction: column;
-}
-
-#delete-modal-header {
-  text-align: center;
-  color: red;
-}
-
 /* menu */
 
 #menu {
