@@ -1,12 +1,4 @@
 /* meta */
-/*
-font-family: 'Prosto One', cursive;
-font-family: 'Varela', sans-serif;
-font-family: 'Alegreya Sans SC', sans-serif;
-font-family: 'Economica', sans-serif;
-font-family: 'Ruda', sans-serif;
-font-family: 'Syncopate', sans-serif;
-font-family: 'Michroma', sans-serif; */
 
 h1, h2, h3, h3, h4, h5, small {
   margin: 0
@@ -35,10 +27,6 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  /* font-family: 'Varela', sans-serif; */
-  /* font-family: 'Alegreya Sans SC', sans-serif; */
-  /* font-family: 'Economica', sans-se rif; */
-  /* font-family: 'Syncopate', sans-serif; */
   font-family: 'Michroma', sans-serif;
   color: #424141
 }
@@ -449,8 +437,8 @@ footer small {
   .work-body-small {
     justify-content: space-between;
   }
-
 }
+
 @media only screen and (max-width: 500px) {
   .resume-modal {
     height: 73%;
@@ -466,6 +454,10 @@ footer small {
     width: 80%;
   }
 
+  #tech-icon-container {
+    margin-top: 10px;
+  }
+
   .app-modal {
     width: 90%;
     height: auto;
@@ -477,5 +469,45 @@ footer small {
 
   .work-body-small {
     justify-content: space-between;
+  }
+
+  #work-img {
+    height: 175px;
+    width: auto;
+  }
+
+  #sc-logo {
+    height: 50px;
+    width: 50px;
+  }
+
+  #logo-header {
+    color: black;
+    font-size: 20px;
+  }
+
+  #logo-subheader {
+    font-size: 10px;
+  }
+
+  .icon-image {
+    height: 20px;
+    width: auto;
+    margin-bottom: 1px;
+  }
+
+  .about-modal {
+    width: auto;
+    height: 95%
+  }
+
+  #profile-picture {
+    height: 150px;
+    width: auto;
+    border-radius: 50%;
+  }
+
+  #about-description {
+    font-size: 15px;
   }
 }

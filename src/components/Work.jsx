@@ -113,7 +113,7 @@ class Work extends Component {
                </div>
             )
         } else {
-            return(
+            return (
                 <div className="work">
                     <small id="work-title">{this.props.work.name}</small>
                     <div>

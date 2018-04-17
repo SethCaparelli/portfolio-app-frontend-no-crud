@@ -12,7 +12,7 @@ class App extends Component {
       openModal: false,
       work: [{
         name: "Fridge Vision",
-        description: "A Native app that allows users to capture a photo of their fridge or pantry with their mobile device.  Fridge Vision then uses an image recognition to create a list of ingredients. Users are then presented with recipes that they can make with the available food items they already have.",
+        description: "A Native app that allows users to capture a photo of their fridge or pantry with their mobile device.  Fridge Vision then uses an image recognition API to create a list of ingredients. Users are then presented with recipes that they can make with the available food items they already have.",
         technologies: ["/assets/technologies/react-native-logo.png", "/assets/technologies/express-icon.png", "/assets/technologies/node-icon.png", "/assets/technologies/aws-icon.png", "/assets/technologies/postgresql-icon.png", "/assets/technologies/jest-icon.png", "/assets/technologies/knex-icon.png"],
         url: "/assets/gifs/fridge-vision.gif",
         type: "app",
@@ -78,7 +78,7 @@ class App extends Component {
     this.setState({
       work: [{
         name: "Fridge Vision",
-        description: "A Native app that allows users to capture a photo of their fridge or pantry with their mobile device.  Fridge Vision then uses an image recognition to create a list of ingredients. Users are then presented with recipes that they can make with the available food items they already have.",
+        description: "A Native app that allows users to capture a photo of their fridge or pantry with their mobile device.  Fridge Vision then uses an image recognition API to create a list of ingredients. Users are then presented with recipes that they can make with the available food items they already have.",
         technologies: ["/assets/technologies/react-native-logo.png", "/assets/technologies/express-icon.png", "/assets/technologies/node-icon.png", "/assets/technologies/aws-icon.png", "/assets/technologies/postgresql-icon.png", "/assets/technologies/jest-icon.png", "/assets/technologies/knex-icon.png"],
         url: "/assets/gifs/fridge-vision.gif",
         type: "app",
