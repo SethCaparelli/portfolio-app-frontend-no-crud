@@ -13,7 +13,7 @@ class App extends Component {
       work: [{
         name: "Fridge Vision",
         description: "A Native app that allows users to capture a photo of their fridge or pantry with their mobile device.  Fridge Vision then uses an image recognition API to create a list of ingredients. Users are then presented with recipes that they can make with the available food items they already have.",
-        technologies: ["/assets/technologies/react-native-logo.png", "/assets/technologies/express-icon.png", "/assets/technologies/node-icon.png", "/assets/technologies/aws-icon.png", "/assets/technologies/postgresql-icon.png", "/assets/technologies/jest-icon.png", "/assets/technologies/knex-icon.png"],
+        technologies: ["/assets/technologies/react-native-icon.png", "/assets/technologies/express-icon.png", "/assets/technologies/node-icon.png", "/assets/technologies/aws-icon.png", "/assets/technologies/postgresql-icon.png", "/assets/technologies/jest-icon.png", "/assets/technologies/knex-icon.png"],
         url: "/assets/gifs/fridge-vision.gif",
         type: "app",
         code: "https://github.com/SethCaparelli/fridge-vision",
@@ -79,7 +79,7 @@ class App extends Component {
       work: [{
         name: "Fridge Vision",
         description: "A Native app that allows users to capture a photo of their fridge or pantry with their mobile device.  Fridge Vision then uses an image recognition API to create a list of ingredients. Users are then presented with recipes that they can make with the available food items they already have.",
-        technologies: ["/assets/technologies/react-native-logo.png", "/assets/technologies/express-icon.png", "/assets/technologies/node-icon.png", "/assets/technologies/aws-icon.png", "/assets/technologies/postgresql-icon.png", "/assets/technologies/jest-icon.png", "/assets/technologies/knex-icon.png"],
+        technologies: ["/assets/technologies/react-native-icon.png", "/assets/technologies/express-icon.png", "/assets/technologies/node-icon.png", "/assets/technologies/aws-icon.png", "/assets/technologies/postgresql-icon.png", "/assets/technologies/jest-icon.png", "/assets/technologies/knex-icon.png"],
         url: "/assets/gifs/fridge-vision.gif",
         type: "app",
         code: "https://github.com/SethCaparelli/fridge-vision",
@@ -227,7 +227,7 @@ class App extends Component {
           <h3 id="work-header">{this.state.workTitle}</h3>
           <div className={this.state.work.length > 3 ? "work-body" : "work-body-small"}>
           {this.state.work.length > 0
-            ? this.state.work.map((work, index, collection) => <Work key={work.id} index={index} collection={collection} allWork={this.state.work} work={work}/>)
+            ? this.state.work.map((work, index, collection) => <Work key={index} index={index} collection={collection} allWork={this.state.work} work={work}/>)
             : <div id="loader-container"><div className="loader">Loading...</div></div>}
           </div>
           <Menu

@@ -35,9 +35,9 @@ class Work extends Component {
 
         if(this.props.work.type === "app") {
             return (
-               <div className="work">
+               <div id="app-work" className="work">
                     <small id="work-title">{this.props.work.name}</small>
-                    <img src={this.props.work.url} alt="work" id="work-img" onClick={() => this.setState({ openApp: true })} />
+                    <img src={this.props.work.url} className="app-img" alt="work" id="work-img" onClick={() => this.setState({ openApp: true })} />
                     <Modal classNames={{ overlay: 'app-overlay', modal: 'app-modal' }} open={openApp} onClose={this.onCloseAppModal} little>
                         <img id="app-gif" src={this.props.work.url} alt="app-gif"/>
                         <div id="tech-icon-container">

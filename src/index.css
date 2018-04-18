@@ -240,6 +240,10 @@ header{
   height: 250px;
 }
 
+#app-work > img:nth-child(1) {
+  border-radius: 50%;
+}
+
 #button-container {
   display: flex;
 }
@@ -266,6 +270,7 @@ header{
   -ms-transform: translateZ(0);
   transform: translateZ(0);
 }
+
 @-webkit-keyframes load4 {
   0%,
   100% {
