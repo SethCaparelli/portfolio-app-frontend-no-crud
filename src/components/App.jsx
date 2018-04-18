@@ -225,7 +225,7 @@ class App extends Component {
         <Header />
         <div id="work-body-container">
           <h3 id="work-header">{this.state.workTitle}</h3>
-          <div className={this.state.work.length > 3 ? "work-body" : "work-body-small"}>
+          <div className={this.state.workTitle !== "Apps" ? "work-body" : "work-body-small"}>
           {this.state.work.length > 0
             ? this.state.work.map((work, index, collection) => <Work key={index} index={index} collection={collection} allWork={this.state.work} work={work}/>)
             : <div id="loader-container"><div className="loader">Loading...</div></div>}
