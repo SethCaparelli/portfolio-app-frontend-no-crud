@@ -203,7 +203,7 @@ header{
 
 .work-body-small {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   overflow-y: scroll;
   width: 100%;
