@@ -379,6 +379,7 @@ footer {
   justify-content: space-around;
   align-items: center;
   height: 6%;
+  border-top: solid 1px black;
 }
 
 footer small {
