@@ -248,6 +248,12 @@ header{
   display: flex;
 }
 
+
+#react-button-icon {
+  height: 100%;
+  width: auto;
+}
+
 /* Loader */
 
 #loader-container {
@@ -421,9 +427,13 @@ footer small {
 }
 
 @media only screen and (max-width: 1100px) {
-  .work-body-small {
-    justify-content: space-between;
+
+  .resume-modal {
+    height: 75%;
+    width: auto;
   }
+
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -452,15 +462,6 @@ footer small {
 
   #app-gif {
     display: none;
-  }
-
-  .work-body-small {
-    justify-content: space-between;
-  }
-
-  #work-img {
-    height: 175px;
-    width: auto;
   }
 
   #sc-logo {

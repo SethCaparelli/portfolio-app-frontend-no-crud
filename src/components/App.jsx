@@ -10,7 +10,16 @@ class App extends Component {
     super()
     this.state = {
       openModal: false,
-      work: [{
+      work: [
+        {
+        name: "Boomerang",
+        description: "A Native app that allows users to send friends a beverage, aka boomerang, from their favorite bars or restaurants.  Just find friends and follow spots to send your loved ones a QR code redeemable for a boomerang.  Then just sit back and wait for your freinds to send one back",
+        technologies: ["/assets/technologies/react-native-icon.png", "/assets/technologies/express-icon.png", "/assets/technologies/node-icon.png", "/assets/technologies/aws-icon.png", "/assets/technologies/mongo-icon.png"],
+        url: "/assets/gifs/boomerang.gif",
+        type: "app",
+        code: "https://github.com/SethCaparelli/boomerang",
+        site: ""
+        }, {
         name: "Fridge Vision",
         description: "A Native app that allows users to capture a photo of their fridge or pantry with their mobile device.  Fridge Vision then uses an image recognition API to create a list of ingredients. Users are then presented with recipes that they can make with the available food items they already have.",
         technologies: ["/assets/technologies/react-native-icon.png", "/assets/technologies/express-icon.png", "/assets/technologies/node-icon.png", "/assets/technologies/aws-icon.png", "/assets/technologies/postgresql-icon.png", "/assets/technologies/jest-icon.png", "/assets/technologies/knex-icon.png"],
@@ -18,7 +27,6 @@ class App extends Component {
         type: "app",
         code: "https://github.com/SethCaparelli/fridge-vision",
         site: ""
-
       }, {
         name: "Music@",
         description: "Oauth2 connects users to their Spotify account and populates the page with their followed artists. With a click of a button, users are able to bring up the tour information from the Bands In Town Api for their favorite artists",
@@ -38,6 +46,13 @@ class App extends Component {
       }],
       workTitle: "Apps"
     }
+  }
+
+  componentDidMount() {
+    fetch("https://aqueous-dusk-19159.herokuapp.com/tree")
+    .then((response) => {
+      return response.json()
+    })
   }
 
   addWork = (event) => {
@@ -76,7 +91,16 @@ class App extends Component {
 
   getApp = () => {
     this.setState({
-      work: [{
+      work: [
+        {
+        name: "Boomerang",
+        description: "A Native app that allows users to send friends a beverage, aka boomerang, from their favorite bars or restaurants.  Just find friends and follow spots to send your loved ones a QR code redeemable for a boomerang.  Then just sit back and wait for your freinds to send one back",
+        technologies: ["/assets/technologies/react-native-icon.png", "/assets/technologies/express-icon.png", "/assets/technologies/node-icon.png", "/assets/technologies/aws-icon.png", "/assets/technologies/mongo-icon.png"],
+        url: "/assets/gifs/boomerang.gif",
+        type: "app",
+        code: "https://github.com/SethCaparelli/boomerang",
+        site: ""
+        }, {
         name: "Fridge Vision",
         description: "A Native app that allows users to capture a photo of their fridge or pantry with their mobile device.  Fridge Vision then uses an image recognition API to create a list of ingredients. Users are then presented with recipes that they can make with the available food items they already have.",
         technologies: ["/assets/technologies/react-native-icon.png", "/assets/technologies/express-icon.png", "/assets/technologies/node-icon.png", "/assets/technologies/aws-icon.png", "/assets/technologies/postgresql-icon.png", "/assets/technologies/jest-icon.png", "/assets/technologies/knex-icon.png"],
@@ -84,7 +108,6 @@ class App extends Component {
         type: "app",
         code: "https://github.com/SethCaparelli/fridge-vision",
         site: ""
-
       }, {
         name: "Music@",
         description: "Oauth2 connects users to their Spotify account and populates the page with their followed artists. With a click of a button, users are able to bring up the tour information from the Bands In Town Api for their favorite artists",
@@ -225,7 +248,7 @@ class App extends Component {
         <Header />
         <div id="work-body-container">
           <h3 id="work-header">{this.state.workTitle}</h3>
-          <div className={this.state.work.length > 3 ? "work-body" : "work-body-small"}>
+          <div className="work-body">
           {this.state.work.length > 0
             ? this.state.work.map((work, index, collection) => <Work key={index} index={index} collection={collection} allWork={this.state.work} work={work}/>)
             : <div id="loader-container"><div className="loader">Loading...</div></div>}
