@@ -48,7 +48,6 @@ class Work extends Component {
                             <button id="code-button" className="app-button" onClick={() => window.open(this.props.work.code, "_blank")}>See Code</button>
                             {this.props.work.site !== ""
                                 ?  <div className="button-icon-container">
-                                        {/* <i id="react-button-icon" className="fab fa-react"></i> */}
                                         <button
                                             id="site-button"
                                             className="app-button"
