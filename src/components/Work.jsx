@@ -45,10 +45,19 @@ class Work extends Component {
                         </div>
                         <p id="app-description">{this.props.work.description}</p>
                         <div id="app-button-container">
-                            <a href={this.props.work.code} target="_blank" rel="noopener noreferrer"><img src="/assets/technologies/github-icon.png" className="link-icon"/></a>
+                            <div className="link-container">
+                                <a href={this.props.work.code} target="_blank" rel="noopener noreferrer"><img src="/assets/technologies/github-icon.png" className="link-icon"/></a>
+                                <small>Code</small>
+                            </div>
                             {this.props.work.youtube
-                                ? <a href={this.props.work.youtube} target="_blank" rel="noopener noreferrer"><img src="/assets/technologies/youtube-icon.png" className="link-icon"/></a>
-                                : <a href={this.props.work.site} target="_blank" rel="noopener noreferrer"><img src={this.props.work.icon} className="site-icon"/></a>
+                                ? <div className="link-container">
+                                    <a href={this.props.work.youtube} target="_blank" rel="noopener noreferrer"><img src="/assets/technologies/youtube-icon.png" className="link-icon"/></a>
+                                    <small>Demonstration</small>
+                                  </div>
+                                : <div className="link-container">
+                                    <a href={this.props.work.site} target="_blank" rel="noopener noreferrer"><img src={this.props.work.icon} className="site-icon"/></a>
+                                    <small>Live Site</small>
+                                  </div>
                             }
                         </div>
                     </Modal>

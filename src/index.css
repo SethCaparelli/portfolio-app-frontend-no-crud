@@ -259,6 +259,13 @@ header{
   width: auto;
 }
 
+.link-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .site-icon:hover {
   -moz-transform:scale(1.1);
   -webkit-transform:scale(1.1);
