@@ -469,6 +469,15 @@ footer small {
 }
 
 @media only screen and (max-width: 500px) {
+
+  #work-img {
+    height: 200px;
+    width: auto;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    box-shadow: 4px 4px 20px grey;
+  }
+
   .resume-modal {
     height: 73%;
     width: auto;
@@ -508,6 +517,78 @@ footer small {
 
   #logo-subheader {
     font-size: 10px;
+  }
+
+  .icon-image {
+    height: 20px;
+    width: auto;
+    margin-bottom: 1px;
+  }
+
+  .about-modal {
+    width: auto;
+    height: 95%
+  }
+
+  #profile-picture {
+    height: 150px;
+    width: auto;
+    border-radius: 50%;
+  }
+
+  #about-description {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  #work-img {
+    height: 100px;
+    width: auto;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    box-shadow: 4px 4px 20px grey;
+  }
+
+  .resume-modal {
+    height: 73%;
+    width: auto;
+  }
+
+  #resume {
+    height: 95%;
+    width: auto;
+  }
+
+  .about-modal {
+    width: 80%;
+  }
+
+  #tech-icon-container {
+    margin-top: 10px;
+  }
+
+  .app-modal {
+    width: 90%;
+    height: auto;
+  }
+
+  #app-gif {
+    display: none;
+  }
+
+  #sc-logo {
+    height: 30px;
+    width: 30px;
+  }
+
+  #logo-header {
+    color: black;
+    font-size: 15px;
+  }
+
+  #logo-subheader {
+    font-size: 8px;
   }
 
   .icon-image {
