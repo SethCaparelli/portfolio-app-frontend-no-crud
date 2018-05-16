@@ -12,37 +12,39 @@ class App extends Component {
       openModal: false,
       work: [
         {
-        name: "Boomerang",
-        description: "A Native app that allows users to send friends a beverage, aka boomerang, from their favorite bars or restaurants.  Just find friends and follow spots to send your loved ones a QR code redeemable for a boomerang.  Then just sit back and wait for your freinds to send one back",
-        technologies: ["/assets/technologies/react-native-icon.png", "/assets/technologies/express-icon.png", "/assets/technologies/node-icon.png", "/assets/technologies/aws-icon.png", "/assets/technologies/mongo-icon.png"],
-        url: "/assets/gifs/boomerang.gif",
-        type: "app",
-        code: "https://github.com/SethCaparelli/boomerang",
-        youtube: "https://www.youtube.com/watch?v=U7gta2GPU7E"
+          name: "Boomerang",
+          description: "A Native app that allows users to send friends a beverage, aka boomerang, from their favorite bars or restaurants.  Just find friends and follow spots to send your loved ones a QR code redeemable for a boomerang.  Then just sit back and wait for your freinds to send one back",
+          technologies: ["/assets/technologies/react-native-icon.png", "/assets/technologies/express-icon.png", "/assets/technologies/node-icon.png", "/assets/technologies/aws-icon.png", "/assets/technologies/mongo-icon.png"],
+          url: "/assets/gifs/boomerang.gif",
+          type: "app",
+          code: "https://github.com/SethCaparelli/boomerang",
+          youtube: "https://www.youtube.com/watch?v=U7gta2GPU7E"
+          }, {
+          name: "Fridge Vision",
+          description: "A Native app that allows users to capture a photo of their fridge or pantry with their mobile device.  Fridge Vision then uses an image recognition API to create a list of ingredients. Users are then presented with recipes that they can make with the available food items they already have.",
+          technologies: ["/assets/technologies/react-native-icon.png", "/assets/technologies/express-icon.png", "/assets/technologies/node-icon.png", "/assets/technologies/aws-icon.png", "/assets/technologies/postgresql-icon.png", "/assets/technologies/jest-icon.png", "/assets/technologies/knex-icon.png"],
+          url: "/assets/gifs/fridge-vision.gif",
+          type: "app",
+          code: "https://github.com/SethCaparelli/fridge-vision",
+          youtube: "https://youtu.be/yDZoRcStXVQ",
         }, {
-        name: "Fridge Vision",
-        description: "A Native app that allows users to capture a photo of their fridge or pantry with their mobile device.  Fridge Vision then uses an image recognition API to create a list of ingredients. Users are then presented with recipes that they can make with the available food items they already have.",
-        technologies: ["/assets/technologies/react-native-icon.png", "/assets/technologies/express-icon.png", "/assets/technologies/node-icon.png", "/assets/technologies/aws-icon.png", "/assets/technologies/postgresql-icon.png", "/assets/technologies/jest-icon.png", "/assets/technologies/knex-icon.png"],
-        url: "/assets/gifs/fridge-vision.gif",
-        type: "app",
-        code: "https://github.com/SethCaparelli/fridge-vision",
-        youtube: "https://youtu.be/yDZoRcStXVQ"
-      }, {
-        name: "Music@",
-        description: "Oauth2 connects users to their Spotify account and populates the page with their followed artists. With a click of a button, users are able to bring up the tour information from the Bands In Town Api for their favorite artists",
-        technologies: ["/assets/technologies/react-icon-2.png", "/assets/technologies/html-logo.png", "/assets/technologies/css-icon.png", "/assets/technologies/bootstrap-icon.png", "/assets/technologies/node-icon.png", "/assets/technologies/cypress-icon.png"],
-        url: "/assets/gifs/music.gif",
-        type: "app",
-        code: "https://github.com/SethCaparelli/music-app-frontend",
-        site: "http://www.music-at.surge.sh"
-      }, {
-        name: "Cocktail=>",
-        description: "An app that allows users to search for cocktails based off name, ingredient, or random. It then prompts users to search for the corresponding recipe.",
-        technologies: ["/assets/technologies/react-icon-2.png", "/assets/technologies/html-logo.png", "/assets/technologies/css-icon.png", "/assets/technologies/bootstrap-icon.png", "/assets/technologies/cypress-icon.png"],
-        url: "/assets/gifs/cocktail.gif",
-        type: "app",
-        code: "https://github.com/SethCaparelli/cocktail-app-react",
-        site: "http://www.cocktail.surge.sh"
+          name: "Music@",
+          description: "Oauth2 connects users to their Spotify account and populates the page with their followed artists. With a click of a button, users are able to bring up the tour information from the Bands In Town Api for their favorite artists",
+          technologies: ["/assets/technologies/react-icon-2.png", "/assets/technologies/html-logo.png", "/assets/technologies/css-icon.png", "/assets/technologies/bootstrap-icon.png", "/assets/technologies/node-icon.png", "/assets/technologies/cypress-icon.png"],
+          url: "/assets/gifs/music.gif",
+          type: "app",
+          code: "https://github.com/SethCaparelli/music-app-frontend",
+          site: "http://www.music-at.surge.sh",
+          icon: "/assets/app-icons/music@-icon-og.png"
+        }, {
+          name: "Cocktail=>",
+          description: "An app that allows users to search for cocktails based off name, ingredient, or random. It then prompts users to search for the corresponding recipe.",
+          technologies: ["/assets/technologies/react-icon-2.png", "/assets/technologies/html-logo.png", "/assets/technologies/css-icon.png", "/assets/technologies/bootstrap-icon.png", "/assets/technologies/cypress-icon.png"],
+          url: "/assets/gifs/cocktail.gif",
+          type: "app",
+          code: "https://github.com/SethCaparelli/cocktail-app-react",
+          site: "http://www.cocktail.surge.sh",
+          icon: "/assets/app-icons/cocktail-logo.png"
       }],
       workTitle: "Apps"
     }
@@ -107,7 +109,7 @@ class App extends Component {
           url: "/assets/gifs/fridge-vision.gif",
           type: "app",
           code: "https://github.com/SethCaparelli/fridge-vision",
-          youtube: "https://youtu.be/yDZoRcStXVQ"
+          youtube: "https://youtu.be/yDZoRcStXVQ",
         }, {
           name: "Music@",
           description: "Oauth2 connects users to their Spotify account and populates the page with their followed artists. With a click of a button, users are able to bring up the tour information from the Bands In Town Api for their favorite artists",
@@ -115,7 +117,8 @@ class App extends Component {
           url: "/assets/gifs/music.gif",
           type: "app",
           code: "https://github.com/SethCaparelli/music-app-frontend",
-          site: "http://www.music-at.surge.sh"
+          site: "http://www.music-at.surge.sh",
+          icon: "/assets/app-icons/music@-icon-og.png"
         }, {
           name: "Cocktail=>",
           description: "An app that allows users to search for cocktails based off name, ingredient, or random. It then prompts users to search for the corresponding recipe.",
@@ -123,7 +126,8 @@ class App extends Component {
           url: "/assets/gifs/cocktail.gif",
           type: "app",
           code: "https://github.com/SethCaparelli/cocktail-app-react",
-          site: "http://www.cocktail.surge.sh"
+          site: "http://www.cocktail.surge.sh",
+          icon: "/assets/app-icons/cocktail-logo.png"
       }],
       workTitle: "Apps"
     })

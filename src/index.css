@@ -254,6 +254,31 @@ header{
   width: auto;
 }
 
+.site-icon {
+  height: 60px;
+  width: auto;
+}
+
+.site-icon:hover {
+  -moz-transform:scale(1.1);
+  -webkit-transform:scale(1.1);
+  -ms-transform:scale(1.1);
+  transform: scale(1.1);
+}
+
+.link-icon {
+  height: 60px;
+  width: auto;
+}
+
+.link-icon:hover {
+  -moz-transform:scale(1.1);
+  -webkit-transform:scale(1.1);
+  -ms-transform:scale(1.1);
+  transform: scale(1.1);
+}
+
+
 /* Loader */
 
 #loader-container {
@@ -413,7 +438,7 @@ footer small {
 
 .fa-facebook-f:hover {
   cursor: pointer;
-  color: #70E4EF
+  color: #70E4EF;
 }
 
 .fa-github:hover {
