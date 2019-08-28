@@ -3,18 +3,30 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "ajv": "^6.4.0",
-    "cypress": "^2.1.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "ajv": "^6.10.2",
+    "cypress": "^3.4.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-image-lightbox": "^4.6.0",
     "react-responsive-modal": "^2.0.1",
-    "react-scripts": "1.1.1"
+    "react-scripts": "^3.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
